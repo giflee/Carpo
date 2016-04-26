@@ -1,0 +1,38 @@
+{
+  "name": "cn_user",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "user_id": {
+      "type": "number",
+      "required": true
+    },
+    "user_name": {
+      "type": "string",
+      "required": true
+    },
+    "user_pass": {
+      "type": "string",
+      "required": true
+    },
+    "user_role": {
+      "type": "number",
+      "required": true
+    },
+    "user_account": {
+      "type": "string",
+      "required": true
+    },
+    "user_sex": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
