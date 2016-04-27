@@ -1,0 +1,26 @@
+{
+  "name": "cn_type",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "type_id": {
+      "type": "number",
+      "required": true
+      },
+    "type_name": {
+      "type": "string",
+      "required": true
+    }
+},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,30 @@
+<div class="con1">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-6"></div>
+			<div class="col-nd-6 text-right">
+				<button type="button" class="btn btn-success" ng-click="openModal()">新增分类</button>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+	<div class="col-md-10 col-md-offset-1">
+    <table class="table table-striped">
+    	<thead>
+    		<tr>
+    			<td>分类ID</td>
+    			<td>分类名</td>
+    			<td>操作</td>
+    		</tr>
+    	</thead>
+    	<tbody ng-repeat="type in types track by $index">
+    		<tr>
+    			<td>{{type.id}}</td>
+    			<td>{{type.type_name}}</td>
+    			<td>111</td>
+    		</tr>
+    	</tbody>
+    </table>
+    </div>
+    </div>
+</div>

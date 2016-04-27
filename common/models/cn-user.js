@@ -1,3 +1,3 @@
-module.exports = function(CnUser) {
+module.exports = function(Cn_user) {
 
 };

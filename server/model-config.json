@@ -35,5 +35,9 @@
   "cn_user": {
     "dataSource": "mysqlDs",
     "public": true
+  },
+  "cn_type": {
+    "dataSource": "mysqlDs",
+    "public": true
   }
 }

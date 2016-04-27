@@ -1,5 +1,5 @@
 var app = angular.module('app',['ui.router',
-    'lbServices'])
+    'lbServices','ngAnimate','ui.bootstrap'])
 .config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
 
 	$stateProvider
@@ -15,5 +15,10 @@ var app = angular.module('app',['ui.router',
 		.state('admin.main',{
 			url: '/main',
 			templateUrl: 'views/admin/main.html'
+		})
+		.state('admin.type',{
+			url: '/type',
+			templateUrl: 'views/admin/type/type.html',
+			controller: 'typeCtrl'
 		})
 }])
