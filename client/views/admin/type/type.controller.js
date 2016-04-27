@@ -6,8 +6,8 @@ angular.module('app').controller('typeCtrl',['$scope','Cn_type','$uibModal',func
 
 	$scope.openModal = function(){
 		$uibModal.open({
-			templateUrl: '/views/add.html',
-			size:'lg'
+			templateUrl: '/views/admin/type/addType.html',
+			size:'md'
 		})
 	}
 	
