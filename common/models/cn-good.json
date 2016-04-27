@@ -1,0 +1,58 @@
+{
+  "name": "cn_good",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+      },
+    "descrition": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "number",
+      "required": false
+    },
+    "old_price": {
+      "type": "number",
+      "required": true
+    },
+    "owner_name": {
+      "type": "string",
+      "required": true
+    },
+    "owner_tel": {
+      "type": "string",
+      "required": true
+    },
+    "owner_id": {
+      "type": "number",
+      "required": true
+    },
+    "image": {
+      "type": "string",
+      "required": true
+    },
+    "info": {
+      "type": "string",
+      "required": true
+    },
+    "type_id": {
+      "type": "number",
+      "required": true
+    }
+},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

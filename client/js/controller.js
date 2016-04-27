@@ -1,5 +1,5 @@
 
-angular.module('app').controller('show2Ctrl',['$scope','Cn_user','User','Cn_type',function($scope,Cn_user,User,Cn_type){
+angular.module('app').controller('show2Ctrl',['$scope','Cn_user','User','Cn_type','Cn_good',function($scope,Cn_user,User,Cn_type,Cn_good){
 	Cn_user.find().$promise.then(function(result){
 		$scope.users = result;
 	})

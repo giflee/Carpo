@@ -39,5 +39,9 @@
   "cn_type": {
     "dataSource": "mysqlDs",
     "public": true
+  },
+  "cn_good": {
+    "dataSource": "mysqlDs",
+    "public": true
   }
 }
