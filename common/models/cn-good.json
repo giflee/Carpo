@@ -49,6 +49,10 @@
     "type_id": {
       "type": "number",
       "required": true
+    },
+    "creatTime": {
+      "type": "number",
+      "required": "true"
     }
 },
   "validations": [],

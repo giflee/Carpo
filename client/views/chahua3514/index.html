@@ -285,7 +285,7 @@
 	
 	<!-- - - - - - - - - - - - - end Top Panel - - - - - - - - - - - - - - - -->	
 	
-	<div class="main">
+	<div class="main" ui-view>
 
 		<!-- - - - - - - - - - - - - - - Container - - - - - - - - - - - - - - - - -->	
 
@@ -312,148 +312,12 @@
 							</a>
 
 							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>	
+								<span class="cost">￥{{good.price}}</span>
+								<span>{{good.info}}</span> <br />
+								<b>{{good.creatTime | date:'yyyy-MM-dd HH:mm'}}</b>	
 							</div><!--/ .detailed-->
 
-							<a href="#" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
-
-						</li>
-
-					</ul>
-
-					<a href="#" class="see">See all automobiles</a>
-					
-				</div><!--/ .recent-list-cars-->
-				
-			</section><!--/ #content-->
-
-			<section id="content" class="twelve columns">
-				
-				<div class="recent-list-cars">
-					
-					<h3 class="widget-title">文教图书</h3>
-
-					<ul class="clearfix">
-
-						<li>
-							<a href="#" class="single-image video picture">
-								<img src="views/chahua3514/images/temp/thumb-1.jpg" alt="" />
-							</a>
-
-							<a href="#" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
-							</a>
-
-							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>	
-							</div><!--/ .detailed-->
-
-							<a href="#" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
-
-						</li>
-
-						<li>
-							<a href="#" class="single-image picture video">
-								<img src="views/chahua3514/images/temp/thumb-2.jpg" alt="" />
-							</a>
-
-							<a href="#" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
-							</a>
-
-							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>	
-							</div><!--/ .detailed-->
-
-							<a href="#" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
-
-						</li>
-
-						<li>
-							<a href="#" class="single-image picture">
-								<img src="views/chahua3514/images/temp/thumb-3.jpg" alt="" />
-							</a>
-
-							<a href="#" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
-							</a>
-
-							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>	
-							</div><!--/ .detailed-->
-
-							<a href="#" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
-
-						</li>
-
-						<li>
-							<a href="#" class="single-image">
-								<img src="views/chahua3514/images/temp/no-thumb.jpg" alt="" />
-							</a>
-
-							<a href="#" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
-							</a>
-
-							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>	
-							</div><!--/ .detailed-->
-
-							<a href="#" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
-
-						</li>
-
-						<li>
-							<a href="#" class="single-image picture">
-								<img src="views/chahua3514/images/temp/thumb-4.jpg" alt="" />
-							</a>
-
-							<a href="#" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
-							</a>
-
-							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>	
-							</div><!--/ .detailed-->
-
-							<a href="#" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
-
-						</li>
-
-						<li>
-							<a href="#" class="single-image picture">
-								<img src="views/chahua3514/images/temp/thumb-5.jpg" alt="" />
-							</a>
-
-							<a href="#" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
-							</a>
-
-							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>	
-							</div><!--/ .detailed-->
-
-							<a href="#" class="button orange">Details</a>
+							<a ui-sref="show.details({id: good.id})" class="button orange">详细</a>
 							<label class="compare"><input type="checkbox" />Compare</label>
 
 						</li>

@@ -8,6 +8,11 @@ var app = angular.module('app',['ui.router',
 			templateUrl: 'views/chahua3514/index.html',
 			controller: 'showCtrl'
 		})
+		.state('show.details',{
+			url: '/details/:id',
+			templateUrl: 'views/chahua3514/one-products.html',
+			controller: 'detailsCtrl'
+		})
 		.state('admin',{
 			url: '/admin',
 			templateUrl: 'views/admin/admin.html'
