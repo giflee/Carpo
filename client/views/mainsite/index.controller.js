@@ -10,13 +10,6 @@ angular.module('app').controller('showCtrl',['$scope','Cn_type','Cn_good',functi
 			})
 		});
 	})
-
-	// $scope.showDetial = function(param_id){
-	// 	Cn_good.find({filter: {where: {id: param_id}}}).$promise
-	// 	.then(function(data){
-	// 		$scope.good = data;
-	// 	})
-	// }
 }])
 
 .controller('detailsCtrl',['$scope','Cn_good','$stateParams',function($scope,Cn_good,$stateParams){
