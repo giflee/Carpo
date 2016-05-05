@@ -1,0 +1,38 @@
+{
+  "name": "cn_comments",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "user_name": {
+      "type": "string",
+      "required": true
+      },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "message": {
+      "type": "string",
+      "required": true
+    },
+    "good_id": {
+      "type": "number",
+      "required": true
+    },
+    "user_id": {
+      "type": "number",
+      "required": true
+    }
+},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

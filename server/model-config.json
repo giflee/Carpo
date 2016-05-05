@@ -43,5 +43,9 @@
   "cn_good": {
     "dataSource": "mysqlDs",
     "public": true
+  },
+  "cn_comments": {
+    "dataSource": "mysqlDs",
+    "public": true
   }
 }
