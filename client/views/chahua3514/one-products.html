@@ -304,34 +304,31 @@
 							</div><!--/ .tabs-container -->	
 
 						</div><!--/ .entry-tabs-->
-						
+						<div class="comments" ng-repeat="comment in comments track by $index">
+							<p>{{comment.message}}</p>
+						</div>
 						<h3 class="section-title">Contact Us regarding this car</h3>
 						
-							<form method="post" action="" class="comments-form" />
+							<form class="comments-form" />
 
 								<p class="input-block">
 									<label for="name">Your Name (required)</label>
-									<input type="text" name="name" id="name" />
+									<input type="text" name="name" id="name" ng-model="userName"/>
 								</p>
 
 								<p class="input-block">
 									<label for="email">Your Email (required)</label>
-									<input type="text" name="email" id="email" />
-								</p>
-
-								<p class="input-block">
-									<label for="web">Website</label>
-									<input type="text" name="web" id="web" />
+									<input type="text" name="email" id="email" ng-model="email"/>
 								</p>
 
 								<p class="input-block">
 									<label for="comments">You Message: (required)</label>
-									<textarea name="comments" id="comments" cols="30" rows="10"></textarea>	
+									<textarea name="comments" id="comments" cols="30" rows="10" ng-model="comment"></textarea>	
 								</p>
 
 								<p class="input-block">
 									<label>&nbsp;</label>
-									<button class="button orange" type="submit" id="submit">Submit</button>
+									<button class="button orange" id="submit" ng-click="addComment(gooditem)">Submit</button>
 								</p>
 
 							</form><!--/ .contact-form-->	

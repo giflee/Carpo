@@ -12,10 +12,28 @@ angular.module('app').controller('showCtrl',['$scope','Cn_type','Cn_good',functi
 	})
 }])
 
-.controller('detailsCtrl',['$scope','Cn_good','$stateParams',function($scope,Cn_good,$stateParams){
+.controller('detailsCtrl',['$scope','Cn_good','$stateParams','Cn_comments','$state',function($scope,Cn_good,$stateParams,Cn_comments,$state){
 	Cn_good.find({filter: {where: {id: $stateParams.id}}}).$promise
 	 	.then(function(data){
 	 		$scope.gooditem = data[0];
+	 		Cn_comments.find({filter: {where: {good_id: data[0].id}}}).$promise
+	 		.then(function(result){
+	 			$scope.comments = result;
+	 		})
 	 	})
+	 
+	 $scope.addComment = function(gooditem){
+	
+	 	Cn_comments.create({
+	 		id: 0,
+	 		user_name: $scope.userName,
+	 		email: $scope.email,
+	 		message: $scope.comment,
+	 		good_id: gooditem.id,
+	 		user_id: gooditem.owner_id
+	 	}).$promise.then(function(result){
+	 		$scope.comments.push(result);
+	 	})
+	 }
 }])
 
