@@ -1,0 +1,46 @@
+{
+  "name": "cn_exchange",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "creatTime": {
+      "type": "number",
+      "required": true
+    },
+    "author": {
+      "type": "string",
+      "required": true
+    },
+    "author_id": {
+      "type": "number",
+      "required": true
+    },
+    "tags": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "content": {
+      "type": "string",
+      "required": false
+    },
+    "phone": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

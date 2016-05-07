@@ -1,6 +1,7 @@
-angular.module('app').controller('showCtrl',['$scope','Cn_type','Cn_good',function($scope,Cn_type,Cn_good){
+angular.module('app').controller('showCtrl',['$scope','Cn_type','Cn_good','Cn_user',function($scope,Cn_type,Cn_good,Cn_user){
 	
-	//获取所有的物品数据
+	$scope.isShowUserBox = true;
+	// 获取所有的物品数据
 	Cn_type.find().$promise.then(function(result){
 		$scope.types = result;
 		$scope.types.forEach(function(item){
@@ -10,6 +11,19 @@ angular.module('app').controller('showCtrl',['$scope','Cn_type','Cn_good',functi
 			})
 		});
 	})
+
+	// 首页登录的验证
+	$scope.login = function(){
+		Cn_user.find({filter: {where: {user_account: $scope.userName}}}).$promise
+		.then(function(data){
+			if (data[0].user_pass == $scope.password) {
+				$scope.current_user = data[0].user_name;
+				$scope.isShowUserBox = false;
+			}else{
+				$scope.loginError = '用户名和密码错误';
+			}
+		})
+	}
 }])
 
 .controller('detailsCtrl',['$scope','Cn_good','$stateParams','Cn_comments','$state',function($scope,Cn_good,$stateParams,Cn_comments,$state){
@@ -35,5 +49,11 @@ angular.module('app').controller('showCtrl',['$scope','Cn_type','Cn_good',functi
 	 		$scope.comments.push(result);
 	 	})
 	 }
+}])
+
+.controller('needCtrl',['$scope','Cn_need',function($scope,Cn_need){
+	Cn_need.find().$promise.then(function(data){
+		$scope.needs = data;
+	})
 }])
 

@@ -47,5 +47,17 @@
   "cn_comments": {
     "dataSource": "mysqlDs",
     "public": true
+  },
+  "cn_need": {
+    "dataSource": "mysqlDs",
+    "public": true
+  },
+  "cn_give": {
+    "dataSource": "mysqlDs",
+    "public": true
+  },
+  "cn_exchange": {
+    "dataSource": "mysqlDs",
+    "public": true
   }
 }

@@ -13,6 +13,11 @@ var app = angular.module('app',['ui.router',
 			templateUrl: 'views/chahua3514/one-products.html',
 			controller: 'detailsCtrl'
 		})
+		.state('show.need',{
+			url: '/need',
+			templateUrl: 'views/chahua3514/blog.html',
+			controller: 'needCtrl'
+		})
 		.state('admin',{
 			url: '/admin',
 			templateUrl: 'views/admin/admin.html'
