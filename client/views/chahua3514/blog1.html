@@ -1,0 +1,192 @@
+	<div class="main">
+
+		<!-- - - - - - - - - - - - - - - Container - - - - - - - - - - - - - - - - -->	
+
+		<section class="container sbl clearfix">
+
+			<!-- - - - - - - - - - - - - - - Content - - - - - - - - - - - - - - - - -->		
+
+			<section id="content" class="twelve columns">
+				
+				<h3 class="section-title">赠送专区</h3>
+				
+				<article class="entry clearfix" ng-repeat="need in needs track by $index">		
+						
+					<div class="entry-body">
+						
+						<ul class="entry-meta">
+							<li><b>Date:</b>&nbsp;<a href="#">{{need.creatTime | date:'yyyy-MM-dd HH:mm'}}</a></li>
+							<li><b>Author:</b>&nbsp;<a href="#">{{need.author}}</a></li>
+							<li class="tags"><b>Tags:</b>&nbsp;<a href="#">{{need.tags}}</a><a href="#">{{need.tags}}</a></li>
+						</ul>
+							
+						<a href="blog-single.html">
+							<h6 class="title">{{need.title}}</h6>
+						</a>
+
+						<p>
+							{{need.title}} 
+						</p>
+
+					</div><!--/ .entry-body -->
+
+					<footer class="meta clearfix">
+						<a href="#" class="icon-comments">12 comments</a>
+						<a href="blog-single.html" class="button dark">Details</a>
+					</footer><!--/ .meta -->
+			
+				</article><!--/ .entry-->
+				
+				<div class="wp-pagenavi clearfix">
+					
+					<span class="pages">Page 1 of 2</span>
+					<a class="prevpostslink" href="#"></a>
+					<span class="current">1</span>
+					<a class="page" href="#">2</a>
+					<a class="nextpostslink" href="#"></a>
+					
+				</div><!--/ .wp-pagenavi-->
+
+			</section><!--/ #content-->
+
+			<!-- - - - - - - - - - - - - - end Content - - - - - - - - - - - - - - - - -->	
+
+
+			<!-- - - - - - - - - - - - - - - Sidebar - - - - - - - - - - - - - - - - -->	
+
+			<aside id="sidebar" class="four columns">
+				
+				
+				<div class="widget-container widget_custom_search">
+
+					<h3 class="widget-title">Quick Search</h3>
+
+					<form action="/" id="boxpanel" class="form-panel" />
+
+						<fieldset>
+							<label for="manufacturer">Manufacturer:</label>
+							<select id="manufacturer" name="manufacturer">
+								<option value="0" />Any
+								<option value="1" />Lorem
+								<option value="2" />Ipsum
+							</select>
+						</fieldset>
+
+						<fieldset>
+							<label for="minprice">Min Price:</label>
+							<select id="minprice" name="minprice">
+								<option value="0" />No min
+								<option value="1" />Lorem
+								<option value="2" />Ipsum
+							</select>
+						</fieldset>
+
+						<fieldset>
+							<label for="maxprice">Max Price:</label>
+							<select id="maxprice" name="maxprice">
+								<option value="0" />No max
+								<option value="1" />Lorem
+								<option value="2" />Ipsum
+							</select>
+						</fieldset>
+
+						<fieldset>
+							<label for="trans">Trans:</label>
+							<select id="trans" name="trans">
+								<option value="0" />Any
+								<option value="1" />Lorem
+								<option value="2" />Ipsum
+							</select>
+						</fieldset>
+
+						<fieldset>
+							<label for="mileage">Mileage:</label>
+							<select id="mileage" name="mileage">
+								<option value="0" />Any
+								<option value="1" />Lorem
+								<option value="2" />Ipsum
+							</select>
+						</fieldset>
+
+						<fieldset>
+							<label for="bodytype">Body Type:</label>
+							<select id="bodytype" name="bodytype">
+								<option value="0" />Any
+								<option value="1" />Lorem
+								<option value="2" />Ipsum
+							</select>
+						</fieldset>
+
+						<div class="clear"></div>
+						<button id="submitSearch" class="submit-search" type="submit">Search</button>
+
+					</form><!--/ .form-panel-->
+
+				</div><!--/ .widget-container-->
+		
+				
+				<div class="widget-container widget_loan_calculator">
+					
+					<div class="widget-head">
+						
+						<h3 class="widget-title">Loan Calculator</h3>
+						
+					</div>
+					
+					<div class="entry-loan">
+						
+						<table>
+							<tr>
+								<td><label for="loan_amount">Loan Amount</label></td>
+								<td><input id="loan_amount" type="text" value="0.00" /></td>
+								<td>$</td>
+							</tr>
+							<tr>
+								<td><label for="payment">Down Payment</label></td>
+								<td><input id="payment" type="text" value="0.00" /></td>
+								<td>$</td>
+							</tr>
+							<tr>
+								<td><label for="rate">Annual Rate</label></td>
+								<td><input id="rate" type="text" value="0.00" /></td>
+								<td>%</td>
+							</tr>
+							<tr>
+								<td><label for="term">Term</label></td>
+								<td><input id="term" type="text" value="0.00" /></td>
+								<td>Yrs</td>
+							</tr>
+							<tr>
+								<td>
+									<a id="buttonCalculate" href="#" class="button orange">Calculate</a>
+								</td>
+							</tr>
+							<tr>
+								<td><label for="payments">Payments</label></td>
+								<td><input id="payments" type="text" value="0.00" /></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><label for="mpayment">Monthly Payment</label></td>
+								<td><input id="mpayment" type="text" value="0.00" /></td>
+								<td>$</td>
+							</tr>
+						</table>
+						
+					</div><!--/ .entry-loan-->
+					
+				</div><!--/ .widget-container-->
+				
+			</aside><!--/ #sidebar-->
+
+			<!-- - - - - - - - - - - - - end Sidebar - - - - - - - - - - - - - - - - -->
+
+		</section><!--/.container -->
+
+		<!-- - - - - - - - - - - - - end Container - - - - - - - - - - - - - - - - -->			
+		
+	</div><!--/ .main-->
+	
+	
+</div><!--/ .wrap-->
+

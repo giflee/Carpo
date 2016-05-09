@@ -20,12 +20,12 @@ var app = angular.module('app',['ui.router',
 		})
 		.state('show.give',{
 			url: '/give',
-			templateUrl: 'views/chahua3514/blog-single.html',
+			templateUrl: 'views/chahua3514/blog1.html',
 			controller: 'giveCtrl'
 		})
 		.state('show.exchange',{
 			url: '/give',
-			templateUrl: 'views/chahua3514/blog-single.html',
+			templateUrl: 'views/chahua3514/blog2.html',
 			controller: 'exchangeCtrl'
 		})
 		.state('admin',{
