@@ -18,6 +18,16 @@ var app = angular.module('app',['ui.router',
 			templateUrl: 'views/chahua3514/blog.html',
 			controller: 'needCtrl'
 		})
+		.state('show.give',{
+			url: '/give',
+			templateUrl: 'views/chahua3514/blog-single.html',
+			controller: 'giveCtrl'
+		})
+		.state('show.exchange',{
+			url: '/give',
+			templateUrl: 'views/chahua3514/blog-single.html',
+			controller: 'exchangeCtrl'
+		})
 		.state('admin',{
 			url: '/admin',
 			templateUrl: 'views/admin/admin.html'

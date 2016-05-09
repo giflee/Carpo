@@ -57,3 +57,15 @@ angular.module('app').controller('showCtrl',['$scope','Cn_type','Cn_good','Cn_us
 	})
 }])
 
+.controller('giveCtrl',['$scope','Cn_give',function($scope,Cn_give){
+	Cn_give.find().$promise.then(function(data){
+		$scope.gives = data;
+	})
+}])
+
+.controller('exchangeCtrl',['$scope','Cn_exchange',function($scope,Cn_exchange){
+	Cn_exchange.find().$promise.then(function(data){
+		$scope.exchanges = data;
+	})
+}])
+
