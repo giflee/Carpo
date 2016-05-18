@@ -1,4 +1,4 @@
-angular.module('app').controller('showCtrl',['$scope','Cn_type','Cn_good','Cn_user',function($scope,Cn_type,Cn_good,Cn_user){
+angular.module('app').controller('showCtrl',['$scope','Cn_type','Cn_good','Cn_user','$rootScope',function($scope,Cn_type,Cn_good,Cn_user,$rootScope){
 	
 	$scope.isShowUserBox = true;
 	// 获取所有的物品数据
@@ -18,6 +18,7 @@ angular.module('app').controller('showCtrl',['$scope','Cn_type','Cn_good','Cn_us
 		.then(function(data){
 			if (data[0].user_pass == $scope.password) {
 				$scope.current_user = data[0].user_name;
+				$rootScope.current_user = data[0].user_name;
 				$scope.isShowUserBox = false;
 			}else{
 				$scope.loginError = '用户名和密码错误';
@@ -67,5 +68,23 @@ angular.module('app').controller('showCtrl',['$scope','Cn_type','Cn_good','Cn_us
 	Cn_exchange.find().$promise.then(function(data){
 		$scope.needs = data;
 	})
+}])
+
+.controller('needDetailsCtrl',['$scope','Cn_need','$stateParams','Cn_need_comments','$rootScope','toastr',function($scope,Cn_need,$stateParams,Cn_need_comments,$rootScope,toastr){
+	Cn_need.find({filter: {where: {id: $stateParams.id}}}).$promise.then(function(data){
+		$scope.need = data[0];
+	})
+
+	Cn_need_comments.find({filter: {where: {need_id: $stateParams.id}}}).$promise.then(function(data){
+		$scope.comments = data;
+	})
+
+	$scope.submit = function(){
+		if (!$rootScope.current_user) {
+			toastr.error('请您先登录,再进行评论');
+		}else{
+
+		}
+	}
 }])
 

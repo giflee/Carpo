@@ -1,5 +1,5 @@
 var app = angular.module('app',['ui.router',
-    'lbServices','ngAnimate','ui.bootstrap'])
+    'lbServices','ngAnimate','ui.bootstrap','toastr'])
 .config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
 
 	$stateProvider
@@ -17,6 +17,11 @@ var app = angular.module('app',['ui.router',
 			url: '/need',
 			templateUrl: 'views/chahua3514/blog.html',
 			controller: 'needCtrl'
+		})
+		.state('show.need.details',{
+			url: '/details/:id',
+			templateUrl: 'views/chahua3514/blog-single.html',
+			controller: 'needDetailsCtrl'
 		})
 		.state('show.give',{
 			url: '/give',

@@ -59,5 +59,9 @@
   "cn_exchange": {
     "dataSource": "mysqlDs",
     "public": true
+  },
+  "cn_need_comments": {
+    "dataSource": "mysqlDs",
+    "public": true
   }
 }

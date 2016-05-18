@@ -1,4 +1,4 @@
-	<div class="main">
+	<div class="main" ui-view>
 
 		<!-- - - - - - - - - - - - - - - Container - - - - - - - - - - - - - - - - -->	
 
@@ -32,7 +32,7 @@
 
 					<footer class="meta clearfix">
 						<a href="#" class="icon-comments">12 comments</a>
-						<a href="blog-single.html" class="button dark">Details</a>
+						<a ui-sref="show.need.details({id: need.id})" class="button dark">Details</a>
 					</footer><!--/ .meta -->
 			
 				</article><!--/ .entry-->

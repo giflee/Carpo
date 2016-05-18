@@ -1,0 +1,42 @@
+{
+  "name": "cn_need_comments",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "user_name": {
+      "type": "string",
+      "required": true
+      },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "message": {
+      "type": "string",
+      "required": true
+    },
+    "need_id": {
+      "type": "number",
+      "required": true
+    },
+    "user_id": {
+      "type": "number",
+      "required": true
+    },
+    "creatTime": {
+      "type": "number",
+      "required": true
+    }
+},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

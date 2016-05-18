@@ -10,12 +10,12 @@
 				
 				<article class="entry clearfix single">
 					
-					<h2 class="title">2009  Aston Martin DB9</h2>
+					<h2 class="title">{{need.title}}</h2>
 					
 					<ul class="entry-meta">
-						<li><b>Date:</b>&nbsp;<a href="#">November 27, 2011</a></li>
-						<li><b>Author:</b>&nbsp;<a href="#">Admin</a></li>
-						<li class="tags"><b>Tags:</b>&nbsp;<a href="#">Cars</a><a href="#">News</a></li>
+						<li><b>Date:</b>&nbsp;<a>{{need.creatTime | date:'yyyy-MM-dd HH:mm'}}</a></li>
+						<li><b>Author:</b>&nbsp;<a>{{need.author}}</a></li>
+						<li class="tags"><b>Tags:</b>&nbsp;<a>{{need.tags}}</a></li>
 					</ul>
 
 					<div class="entry-body">
@@ -23,74 +23,27 @@
 						<img class="entry-image" alt="" src="views/chahua3514/images/temp/temp_460x280.png" />
 						
 						<p>
-							Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-							nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-							mollit anim. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-							magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Consectetur adipisicing 
-							elit, sed do eiusmod tempor incididunt Labore et dolore magna aliqua. Ut enim ad minim veniam, 
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-							irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim. 
-							Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							Ut enim ad minim veniam.
 						</p>
-						
+							{{need.content}}
 						<p>
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-							nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-							mollit anim. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-							magna aliqua. Ut enim ad minim veniam.
+							{{need.content}}
 						</p>
 						
 						<ul class="list type-1">
-							<li><b>Body Style: </b><span>SEDAN 4-DR</span></li>
-							<li><b>Driveline: </b><span>FWD</span></li>
-							<li><b>Fuel Economy-city: </b><span>30-32 miles/gallon</span></li>
-							<li><b>Anti-Brake System: </b><span>Non-ABS | 4-Wheel | ABS</span></li>
-							<li><b>Front Brake Type: </b><span>Disc</span></li>
-							<li><b>Turning Diameter: </b><span>36.10 in.</span></li>
-							<li><b>Rear Suspension: </b><span>Semi</span></li>
-							<li><b>Rear Spring Type: </b><span>Coil</span></li>
-							<li><b>Front Headroom: </b><span>39.10 in.</span></li>
-							<li><b>Front Legroom: </b><span>41.30 in.</span></li>
-							<li><b>Front Shoulder Room: </b><span>53.10 in.</span></li>
-							<li><b>Front Hip Room: </b><span>51.90 in.</span></li>
-							<li><b>Curb Weight-automatic: </b><span>2568 lbs</span></li>
-							<li><b>Overall Length: </b><span>178.30 in.</span></li>
+							<li><b>发布者: </b><span>jianfulee</span></li>
+							<li><b>姓名: </b><span>李健夫</span></li>
+							<li><b>email: </b><span>abc@123.com</span></li>
+							<li><b>联系方式: </b><span>13029339077</span></li>
+							<li><b>个人信息: </b><span></span></li>
 						</ul>
 						
 						<p>
-							Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-							nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-							deserunt mollit anim. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-							labore et dolore magna aliqua. Ut enim ad minim veniam.  Ut enim ad minim veniam. Excepteur sint occaecat cupidatat non proident.
+							{{need.content}}
 						</p>
 
 					</div><!--/ .entry-body -->
 
 				</article><!--/ .entry-->
-				
-				<div class="bio clearfix">
-					
-					<h3 class="section-title">About the Author</h3>   
-					
-					<img src="images/gravatar.png" class="avatar" alt="" />
-					
-					<div class="bio-info clearfix">
-						
-						<p>
-							Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-							in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident, sunt in culpa qui officia deserunt mollit anim. Consectetur adipisicing elit.
-						</p>
-						
-					</div><!--/ bio-info-->
-					
-				</div><!--/ .bio-->
 				
 				<section id="comments">
 
@@ -98,7 +51,7 @@
 
 					<ol class="comments-list">
 
-						<li class="comment">
+						<li class="comment" ng-repeat="comment in comments track by $index">
 
 							<article>
 
@@ -108,57 +61,19 @@
 									
 									<div class="comment-meta">
 
-										<div class="date"><b>Date:</b>&nbsp;<span>November 27, 2011</span></div>
-										<div class="author"><b>Author:</b>&nbsp;<a href="#">Admin</a></div>
+										<div class="date"><b>Date:</b>&nbsp;<span>{{comment.creatTime | date: 'yyyy-MM-DD HH:mm:ss'}}</span></div>
+										<div class="author"><b>Author:</b>&nbsp;<a href="#">{{comment.user_name}}</a></div>
 
 									</div><!--/ .comment-meta -->
 
 									<p>
-										Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-										Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-										fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-										culpa qui officia deserunt mollit anim. Consectetur adipisicing elit, sed do eiusmod 
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
-										<a class="comment-reply-link" href="#">Reply</a>
+										{{comment.message}}
+										<!-- <a class="comment-reply-link" href="#">Reply</a> -->
 									</p>
 									
 								</div><!--/ .comment-body -->
 
 							</article>
-
-							<ul class="children">
-
-								<li class="comment">
-
-									<article>
-
-										<img class="avatar" alt="" src="images/gravatar.png" />
-
-										<div class="comment-body">
-
-											<div class="comment-meta">
-
-												<div class="date"><b>Date:</b>&nbsp;<span>November 27, 2011</span></div>
-												<div class="author"><b>Author:</b>&nbsp;<a href="#">Admin</a></div>
-
-											</div><!--/ .comment-meta -->
-
-											<p>
-												Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-												Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-												fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-												culpa qui officia deserunt mollit anim. Consectetur adipisicing elit, sed do eiusmod 
-												tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
-												<a class="comment-reply-link" href="#">Reply</a>
-											</p>
-
-										</div><!--/ .comment-body -->
-
-									</article>
-
-								</li>
-
-							</ul><!--/ .children-->
 
 						</li>
 
@@ -198,33 +113,17 @@
 				
 				<section id="respond">
 
-					<h3 class="section-title">Leave a Reply</h3>
+					<h3 class="section-title">回复内容</h3>
 
-					<form method="post" action="" class="comments-form" />
-
-						<p class="input-block">
-							<label for="name">Your Name (required)</label>
-							<input type="text" name="name" id="name" />
-						</p>
-
-						<p class="input-block">
-							<label for="email">Your Email (required)</label>
-							<input type="text" name="email" id="email" />
-						</p>
-
-						<p class="input-block">
-							<label for="web">Website</label>
-							<input type="text" name="web" id="web" />
-						</p>
-
+					<form class="comments-form" />
 						<p class="input-block">
 							<label for="comments">You Message: (required)</label>
-							<textarea name="comments" id="comments" cols="30" rows="10"></textarea>	
+							<textarea name="comments" id="comments" cols="30" rows="10" ng-model="replyC"></textarea>	
 						</p>
 						
 						<p class="input-block">
 							<label>&nbsp;</label>
-							<button class="button orange" type="submit" id="submit">Submit</button>
+							<button class="button orange" type="submit" id="submit" ng-click="submit()">Submit</button>
 						</p>
 						
 					</form><!--/ .contact-form-->	
