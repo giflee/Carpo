@@ -3,26 +3,52 @@
 		<div class="col-md-12">
 			<div class="col-md-6"></div>
 			<div class="col-nd-6 text-right">
-				<button type="button" class="btn btn-success" ng-click="openModal()">新增分类</button>
+
 			</div>
 		</div>
 	</div>
 	<div class="row">
 	<div class="col-md-10 col-md-offset-1">
-    <table class="table table-striped">
+    <table class="table table-bordered">
     	<thead>
     		<tr>
-    			<td>分类ID</td>
-    			<td>分类名</td>
-    			<td>操作</td>
+                <td>商品ID</td>
+    			<td>商品信息</td>
+    			<td>商品价格</td>
+    			<td>发布用户</td>
+                <td>发布时间</td>
+                <td>评论数</td> 
+                <td>操作</td>
     		</tr>
     	</thead>
-    	<tbody ng-repeat="type in types track by $index">
+    	<tbody>
     		<tr>
-    			<td>{{type.id}}</td>
-    			<td>{{type.type_name}}</td>
-    			<td>111</td>
+    			<td>1</td>
+    			<td>篮球</td>
+    			<td>300</td>
+                <td>jianfulee</td>
+                <td>2012-06-06 12:00:02</td>
+                <td>3</td>
+                <td><a class="" style="color: #5092e1">通过</a>&nbsp;&nbsp;<a class="" style="color: #5092e1">拒绝</a>&nbsp;&nbsp;<a class="" style="color: #5092e1">详情</a></td>
     		</tr>
+            <tr>
+                <td>2</td>
+                <td>羽绒服</td>
+                <td>600</td>
+                <td>ckckck</td>
+                <td>2012-06-06 06:00:02</td>
+                <td>8</td>
+                <td><a class="" style="color: #5092e1">通过</a>&nbsp;&nbsp;<a class="" style="color: #5092e1">拒绝</a>&nbsp;&nbsp;<a class="" style="color: #5092e1">详情</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>轮滑鞋</td>
+                <td>300</td>
+                <td>jianfulee</td>
+                <td>2012-06-06 06:00:02</td>
+                <td>6</td>
+                <td><a class="" style="color: #5092e1">通过</a>&nbsp;&nbsp;<a class="" style="color: #5092e1">拒绝</a>&nbsp;&nbsp;<a class="" style="color: #5092e1">详情</a></td>
+            </tr>
     	</tbody>
     </table>
     </div>
